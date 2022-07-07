@@ -1,0 +1,253 @@
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+:root{
+    --main-color:#0089CC;
+    --bg-color1:#363636;
+    --bg-color2:#000000;
+    --header-heigth:60px;
+}
+body{
+    font-family:'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
+}
+#main-header{
+    width: 100%;
+    height: var(--header-heigth);
+    background-color: var(--main-color);
+    padding-left: 20px;
+    padding-right: 30px;;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bi{
+    font-size: 24px;
+}
+#icon-menu a, #icon-menu button{
+    margin-left: 1em;
+    color: #fff;
+}
+#icon-menu button{
+    border-style: none;;
+    background-color: transparent;
+    outline: 2px solid red;
+    width: 30px;
+    height: 30px;
+}
+.bi-list{
+    font-size: 30px;
+}
+#icon-menu{
+    display: flex;
+    align-items: center;
+}
+
+
+/* 타이틀비주얼 */
+#home main{
+    background: #ccc;
+    height: calc(100vh - var(--header-heigth));
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(../images/title-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#home main h1{
+    font-weight: 500;
+    font-size: 24px;
+}
+.btn-cta {
+    width: 70%;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 17px;
+}
+
+/* gnb toggle */
+#gnb{
+    /* display: none; */
+    position: fixed;
+    width: 85%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background: #fff;
+    transform: translateX(100%);
+    transition-duration: 1s;
+}
+#gnb.on{
+    transform: translateX(0%);
+}
+#gnb #btn-close{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    height: var(--header-heigth);
+    padding: 20px;
+    color: #000;
+}
+#gnb ul li{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    font-size: 16px;
+}
+#gnb ul li:first-child{
+    padding-top: 0;
+}
+#gnb ul li a{
+    color: #333;
+    display: block;
+    padding: 10px 20px;
+}
+
+#about main h1{
+    font-size: 24px;
+    font-weight: 500;
+    padding: 25px 20px;
+}
+#about main img{
+    width: 100%;
+}
+#about main h2{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px;
+}
+#about main p{
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+
+/* #products{} */
+.category-menu{
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 20px;
+    overflow: scroll; 
+    white-space: nowrap;
+}
+
+/* 표준코드가 아니지만 사용 */
+::-webkit-scrollbar{
+    display: none;
+}
+
+.btn-small{
+    background: var(--main-color);
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 5px;
+    margin-right: 7px;
+    display: inline-block;
+}
+.btn-large{
+
+}
+.container{
+    width: 100%;
+    padding: 25px 20px 25px 20px;
+}
+.container h1{
+    font-size: 24px;
+    font-weight: 500;
+}
+.product{
+    width: 155px;
+    height: 221px;
+    margin-bottom: 30px;
+}
+.product img{
+    width: 155px;
+    height: 155px;
+}
+.product .category{
+    color: var(--main-color);
+    font-size: 12px;
+}
+.product .title{
+    font-weight: 500;
+    word-break: keep-all;
+}
+.product .price{
+    font-weight: 700;
+}
+.row.products{
+    display: flex;
+    /* flex-direction: row; 기본값 */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* footer */
+
+#main-footer{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ccc;
+}
+#main-footer ul li{
+    display: inline-block;
+    padding: 20px 10px;
+}
+#main-footer .copyright span{
+    font-weight: 700;
+}
+
+/* detail.html */
+
+#detail main img {
+    width: 100%;
+}
+#detail .container .price{
+    font-size: 16px;
+}
+#detail .container h1{
+    margin-bottom: 10px;
+}
+#detail .container p {
+   font-size: 16px;
+   text-align:left;
+}
+#detail .container{
+    text-align: center;
+}
+#detail .container .btn-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+#detail .container a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 35px;
+    margin-top: 60px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 13px;
+}
+#detail .container .cart{
+    border: 2px solid #fff;
+}
+#detail .container .buy{
+    background: var(--main-color);
+}
